@@ -156,3 +156,12 @@
         </tr>
     </tbody>
 </table>
+
+<div style="margin-top: 1em;">
+    <h3>Relative Difference</h3>
+    <p>
+        {@html cloudflarePrice().actualCost < bunnyCDNPrice().actualCost
+            ? `Cloudflare Stream is <b>${(bunnyCDNPrice().actualCost / cloudflarePrice().actualCost).toFixed(2)} times</b> cheaper than Bunny Stream.`
+            : `Bunny Stream is <b>${(cloudflarePrice().actualCost / bunnyCDNPrice().actualCost).toFixed(2)} times</b> cheaper than Cloudflare Stream.`}
+    </p>
+</div>
